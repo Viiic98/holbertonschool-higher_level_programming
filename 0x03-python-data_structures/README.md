@@ -19,3 +19,5 @@
 - Function that add a tuple
 ### 8-multiple_returns
 - Function that returns len and first character
+### 9-max_integer
+- Function that find the max integer
