@@ -14,11 +14,27 @@ def roman_to_int(roman_string):
             elif roman_string[i] == 'V':
                 n += 5
             elif roman_string[i] == 'X':
-                n += 10
+                if i + 1 < l:
+                    if roman_string[i + 1] == 'L':
+                        n -= 10
+                    elif roman_string[i + 1] == 'C':
+                        n -= 10
+                    else:
+                        n += 10
+                else:
+                    n += 10
             elif roman_string[i] == 'L':
                 n += 50
             elif roman_string[i] == 'C':
-                n += 100
+                if i + 1 < l:
+                    if roman_string[i + 1] == 'D':
+                        n -= 100
+                    elif roman_string[i + 1] == 'M':
+                        n -= 100
+                    else:
+                        n += 100
+                else:
+                    n += 100
             elif roman_string[i] == 'D':
                 n += 500
             elif roman_string[i] == 'M':
