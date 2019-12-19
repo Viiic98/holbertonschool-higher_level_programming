@@ -17,7 +17,17 @@ def roman_to_int(roman_string):
         if len(roman_string) - 1 > i:
             ln = roman_string[i + 1]
             if rom_d.get(l) < rom_d.get(ln):
-                sum -= rom_d.get(l)
+                if l == 'I':
+                    if ln == 'V' or ln == 'X':
+                        sum -= rom_d.get(l)
+                elif l == 'X':
+                    if ln == 'L' or ln == 'C':
+                        sum -= rom_d.get(l)
+                elif l == 'C':
+                    if ln == 'D' or ln == 'M':
+                        sum -= rom_d.get(l)
+                else:
+                    return 0
             else:
                 sum += rom_d.get(l)
         else:
