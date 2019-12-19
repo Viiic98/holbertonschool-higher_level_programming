@@ -1,72 +1,26 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    n, l, m = 0, len(roman_string), 0
+    rom_d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    sum = 0
 
-    if roman_string:
-        for i in range(l):
-            if roman_string[i] == 'I':
-                if m == 3:
-                    return 0
-                if i + 1 < l:
-                    if roman_string[i + 1] != 'I':
-                        n -= 1
-                        m = 0
-                    else:
-                        n += 1
-                        m += 1
-                else:
-                    n += 1
-            elif roman_string[i] == 'V':
-                if i + 1 < l:
-                    if roman_string[i + 1] != 'V':
-                        n += 5
-                    else:
-                        return 0
-                else:
-                    n += 5
-            elif roman_string[i] == 'X':
-                if m == 3:
-                    return 0
-                if i + 1 < l:
-                    if roman_string[i + 1] == 'L':
-                        n -= 10
-                        m = 0
-                    elif roman_string[i + 1] == 'C':
-                        n -= 10
-                        m = 0
-                    elif roman_string[i + 1] != 'X':
-                        n += 10
-                        m = 0
-                    else:
-                        n += 10
-                        m += 1
-                else:
-                    n += 10
-            elif roman_string[i] == 'L':
-                if i + 1 < l:
-                    if roman_string[i + 1] != 'l':
-                        n += 50
-                    else:
-                        return 0
-                else:
-                    n += 50
-            elif roman_string[i] == 'C':
-                if m == 3:
-                    return 0
-                if i + 1 < l:
-                    if roman_string[i + 1] == 'D':
-                        n -= 100
-                        m = 0
-                    elif roman_string[i + 1] == 'M':
-                        n -= 100
-                        m = 0
-                    else:
-                        n += 100
-                        m += 1
-                else:
-                    n += 100
-            elif roman_string[i] == 'D':
-                n += 500
-            elif roman_string[i] == 'M':
-                n += 1000
-    return n
+    for i in range(len(roman_string)):
+        non = 0
+        l = roman_string[i]
+        if roman_string.count(l) > 3:
+            return 0
+        for j in rom_d:
+            if l == j:
+                non += 1
+                break
+        if non == 0:
+            return 0
+        if len(roman_string) - 1 > i:
+            ln = roman_string[i + 1]
+            if rom_d.get(l) < rom_d.get(ln):
+                sum -= rom_d.get(l)
+            else:
+                sum += rom_d.get(l)
+        else:
+            sum += rom_d.get(l)
+
+    return sum
