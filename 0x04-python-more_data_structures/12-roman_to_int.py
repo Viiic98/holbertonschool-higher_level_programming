@@ -18,6 +18,12 @@ def roman_to_int(roman_string):
             ln = roman_string[i + 1]
             if sum != 0 and sum < rom_d.get(ln):
                 return 0
+            elif l == 'V' and ln == 'V':
+                return 0
+            elif l == 'L' and ln == 'L':
+                return 0
+            elif l == 'D' and ln == 'D':
+                return 0
             elif rom_d.get(l) < rom_d.get(ln):
                 if l == 'I':
                     if ln == 'V' or ln == 'X':
