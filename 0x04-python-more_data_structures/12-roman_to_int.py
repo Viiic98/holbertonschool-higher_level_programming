@@ -8,8 +8,6 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         non = 0
         l = roman_string[i]
-        if roman_string.count(l) > 3:
-            return 0
         for j in rom_d:
             if l == j:
                 non += 1
