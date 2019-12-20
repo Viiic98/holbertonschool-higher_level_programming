@@ -7,6 +7,7 @@ def complex_delete(a_dictionary, value):
                 ls.append(i)
         for i in ls:
             a_dictionary.pop(i)
-        return a_dictionary
+        else:
+            return None
     else:
         return None
