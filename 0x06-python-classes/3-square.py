@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+""" Square """
+
+
 class Square:
+    """ Define Square class """
     def __init__(self, size=0):
+        """ Initialize Atributtes
+        Args:
+            Size: Must be an integer greater than 0
+        """
         if type(size) != int:
             print("size must be an integer", end="")
             raise TypeError
@@ -11,5 +19,11 @@ class Square:
             self.__size = size
 
     def area(self):
+        """ Area
+        Args:
+            None
+        Return:
+            Square of size
+        """
         size = self.__size
         return size * size
