@@ -1,14 +1,17 @@
 #!/usr/bin/python3
+""" Function text_indentation """
+
+
 def text_indentation(text):
     """ Function that print a text
-    
+
         Arguments:
                 @text:
                     Must be a string, otherwise a TypeError is
                     going to be raised.
                     There should be no space at the beginning or
                     at the end of each printed line
-        
+
         Return:
                 Doesn't return anything
                 Print a text in the stdout

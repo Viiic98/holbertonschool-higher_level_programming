@@ -1,14 +1,17 @@
 #!/usr/bin/python3
+""" Function """
+
+
 def matrix_divided(matrix, div):
     """ This function divides all elements of a matrix
 
         Arguments:
-                matrix:
+                @matrix:
                         Must be a list of integers or floats otherwise a
                         TypeError is going to be printed.
                         Each row must be of the same size other wise a
                         TypeError is going to be printed
-                div:
+                @div:
                         Must be an integer or float, otherwise a TypeError
                         is going to be printed
                         The value of div can't be 0, otherwise a ZeroDivisionError
@@ -27,7 +30,7 @@ def matrix_divided(matrix, div):
             raise TypeError('Each row of the matrix must have the same size')
         else:
             y = len(matrix[0])
-            new_m = [[0 for i in range(y)] for j in range(x)] 
+            new_m = [[0 for i in range(y)] for j in range(x)]
             for i in range(len(matrix)):
                 if len(matrix[i]) is not y:
                     raise TypeError('Each row of the matrix must have the same size')

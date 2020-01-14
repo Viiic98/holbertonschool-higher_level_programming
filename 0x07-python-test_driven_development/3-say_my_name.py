@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Function say_my_name """
+
+
 def say_my_name(first_name, last_name=""):
     """ Function that prints "My name is <first_name> <last_name>"
 
@@ -12,7 +15,7 @@ def say_my_name(first_name, last_name=""):
                             Default value is empty
                             When a value is not given, is going to
                             be printed a space instead
-        
+
         Return:
                 Doesn't return anything, just print
                 Prints in the stdout "My name is <first name> <last name>"

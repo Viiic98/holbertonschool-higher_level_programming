@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""
-    Module that add two numbers
-"""
+""" Module that add two numbers """
+
+
 def add_integer(a, b=98):
     """ This function add two integers
-    
+
         Arguments:
-                a: 
+                @a:
                     Must be an integer or float, otherwise a
                     TypeError is going to be printed.
                     This argument a doesn't have a default value
-                b: 
+                @b:
                     Must be an integer or float, otherwise a
                     TypeError is going to be printed.
                     The default value of this argument is 98
