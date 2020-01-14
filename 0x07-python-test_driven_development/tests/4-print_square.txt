@@ -1,0 +1,83 @@
+======================
+    4-print_square
+======================
+
+    Using ``print_square``
+---------------------------
+
+Import function ``print_square`` from ``4-print_square`` module:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Now use it:
+
+Normal cases:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(1)
+    #
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+Less than zero:
+
+    >>> try:
+    ...     print_square(-1)
+    ... except Exception as e:
+    ...     print(e)
+    size must be >= 0
+
+    >>> try:
+    ...     print_square(-5000)
+    ... except Exception as e:
+    ...     print(e)
+    size must be >= 0
+
+    >>> try:
+    ...     print_square(-30)
+    ... except Exception as e:
+    ...     print(e)
+    size must be >= 0
+
+Is not an integer or float:
+
+    >>> try:
+    ...     print_square(-0.1)
+    ... except Exception as e:
+    ...     print(e)
+    size must be >= 0
+
+    >>> try:
+    ...     print_square('C')
+    ... except Exception as e:
+    ...     print(e)
+    size must be an integer
+
+    >>> try:
+    ...     print_square(True)
+    ... except Exception as e:
+    ...     print(e)
+    size must be an integer
+
+    >>> print_square(0.02)
+    
+    >>> try:
+    ...     print_square(None)
+    ... except Exception as e:
+    ...     print(e)
+    size must be an integer

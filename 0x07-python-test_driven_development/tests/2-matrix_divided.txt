@@ -1,0 +1,125 @@
+======================
+    2-matrix_divided
+======================
+
+    Using ``matrix_divided``
+---------------------------
+
+Import function ``matrix_divided`` from ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+Length cases:
+
+    >>> matrix = [[0, 0, 0], [0, 0]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    Each row of the matrix must have the same size
+
+    >>> matrix = [[2, 1], [3, 3, 2]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    Each row of the matrix must have the same size
+
+    >>> matrix = [[2, 1], [3, 2], [1, 5, 8, 10]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    Each row of the matrix must have the same size
+
+Matrix doesn't have only float or integer values:
+
+    >>> matrix = [[2, "Holberton"], [3, 3]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[2, 1], ["Holberton", 3]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+
+None cases:
+
+    >>> matrix = [[2, 1], [None, 3]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[None, 1], [None, 3]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[None], [None]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    matrix must be a matrix (list of lists) of integers/floats
+
+Empty case:
+
+    >>> matrix = [[]]
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    [[]]
+
+    >>> matrix = []
+    >>> try:
+    ...     matrix_divided(matrix, 2)
+    ... except Exception as e:
+    ...     print(e)
+    Each row of the matrix must have the same size
+
+Div cases:
+
+    >>> matrix = [[2, 3, 4],[2, 3, 4]]
+    >>> print(matrix_divided(matrix, 2))
+    [[1.0, 1.5, 2.0], [1.0, 1.5, 2.0]]
+
+    >>> matrix = [[2, 3, 4],[2, 3, 4]]
+    >>> print(matrix_divided(matrix, -2))
+    [[-1.0, -1.5, -2.0], [-1.0, -1.5, -2.0]]
+
+    >>> matrix = [[1, 3, 5],[-1, 3, 9]]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 1.0, 1.67], [-0.33, 1.0, 3.0]]
+
+    >>> matrix = [[2, 3, 4],[2, 3, 4]]
+    >>> try:
+    ...     matrix_divided(matrix, 0)
+    ... except Exception as e:
+    ...     print(e)
+    division by zero
+
+    >>> matrix = [[2, 3, 4],[2, 3, 4]]
+    >>> try:
+    ...     matrix_divided(matrix, "Hi")
+    ... except Exception as e:
+    ...     print(e)
+    div must be a number
+
+    >>> matrix = [[2, 3, 4],[2, 3, 4]]
+    >>> try:
+    ...     matrix_divided(matrix, None)
+    ... except Exception as e:
+    ...     print(e)
+    div must be a number
