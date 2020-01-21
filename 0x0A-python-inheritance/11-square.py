@@ -3,7 +3,7 @@ class BaseGeometry:
     """ BaseGeometry class """
     def area(self):
         """ Area method
-        
+
             Raise an exception
         """
         raise Exception('area() is not implemented')
@@ -11,7 +11,7 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """ integer_validator
 
-            Validate if value is an integer greater than 0
+        Validate if value is an integer greater than 0
         """
         if type(value) is not int:
             raise TypeError('<name> must be an integer')
@@ -20,11 +20,12 @@ class BaseGeometry:
         else:
             return
 
+
 class Rectangle(BaseGeometry):
     """ Subclass Rectangle """
     def __init__(self, width, height):
         """ Initialize object
-        
+
             Arguments:
                     @self: Reference to itself
                     @width: Must be an integer greater than 0
@@ -34,18 +35,21 @@ class Rectangle(BaseGeometry):
         Rectangle.integer_validator(self, "", height)
         self.__width = width
         self.__height = height
-            
+
     def __str__(self):
         """ Implement __str__ """
-        return str("[{}] {:d}/{:d}".format(Rectangle.__name__, self.__width, self.__height))
+        w = self.__width
+        h = self.__height
+        return str("[{}] {:d}/{:d}".format(Rectangle.__name__, w, h))
 
     def area(self):
-        """ Area method 
-        
-            Return:
+        """ Area method
+
+        Return:
                     Area of a rectangle
         """
         return self.__width * self.__height
+
 
 class Square(Rectangle):
     """ Subclass Square of Rectangle"""
@@ -57,12 +61,14 @@ class Square(Rectangle):
         self.__size = size
 
     def area(self):
-        """ Area method 
-        
-            Return:
+        """ Area method
+
+           Return:
                     Area of a square
         """
         return self.__size * self.__size
 
     def __str__(self):
-        return str("[{}] {:d}/{:d}".format(Square.__name__, self._Rectangle__width, self._Rectangle__height))
+        w = self._Rectangle__width
+        h = self._Rectangle__height
+        return str("[{}] {:d}/{:d}".format(Square.__name__, w, h))

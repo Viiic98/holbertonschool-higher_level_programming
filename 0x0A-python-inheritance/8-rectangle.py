@@ -3,7 +3,7 @@ class BaseGeometry:
     """ BaseGeometry class """
     def area(self):
         """ Area method
-        
+
             Raise an exception
         """
         raise Exception('area() is not implemented')
@@ -20,17 +20,17 @@ class BaseGeometry:
         else:
             return
 
-class Rectangle(BaseGeometry):
-    """ Subclass Rectangle """
-    def __init__(self, width, height):
-        """ Initialize object
-        
-            Arguments:
+            class Rectangle(BaseGeometry):
+                """ Subclass Rectangle """
+                def __init__(self, width, height):
+                    """ Initialize object
+
+                    Arguments:
                     @self: Reference to itself
                     @width: Must be an integer greater than 0
                     @height: Must be an integer greater than 0
-        """
-        Rectangle.integer_validator(self, "", width)
-        Rectangle.integer_validator(self, "", height)
-        self.__width = width
-        self.__height = height
+                    """
+                    Rectangle.integer_validator(self, "", width)
+                    Rectangle.integer_validator(self, "", height)
+                    self.__width = width
+                    self.__height = height
