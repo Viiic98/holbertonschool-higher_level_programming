@@ -69,6 +69,7 @@ class Square(Rectangle):
         return self.__size * self.__size
 
     def __str__(self):
+        """ Implement __str__ """
         w = self._Rectangle__width
         h = self._Rectangle__height
         return str("[{}] {:d}/{:d}".format(Square.__name__, w, h))
