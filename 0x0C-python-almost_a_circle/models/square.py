@@ -10,7 +10,6 @@ class Square(Rectangle):
             Initialize instances
         """
         super().__init__(size, size, x, y, id)
-        self.size = size
 
     def __str__(self):
         """ Str method defined
@@ -28,7 +27,7 @@ class Square(Rectangle):
             Return:
                     private Size
          """
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -40,7 +39,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-        self.__size = value
 
     def update(self, *args, **kwargs):
         """ Method that update the information of a rectangle
