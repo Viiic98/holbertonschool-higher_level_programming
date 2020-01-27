@@ -29,12 +29,11 @@ class Base:
         filename = cls.__name__+".json"
         if list_objs is not None:
             for i in list_objs:
-                dir = cls.to_dictionary(i)
-                ljson.append(cls.to_json_string(dir))
+                ljson.append(cls.to_dictionary(i))
         else:
             ljson = []
-        with open(filename, mode='w', encoding="UTF-8") as f:
-            json.dump(ljson, f)
+        with open(filename, 'w') as f:
+            json.dump(cls.to_json_string(ljson), f)
 
     @staticmethod
     def from_json_string(json_string):
