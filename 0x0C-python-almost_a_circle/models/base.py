@@ -58,9 +58,13 @@ class Base:
     def load_from_file(cls):
         """ Return a list of instances """
         filename = cls.__name__+".json"
-        print(filename)
         try:
             with open(filename, 'r') as f:
-                l = f.read()
+                my_dic = json.load(f)
+            l_inst = []
+            for i in my_dic:
+                new = cls.create(**i)
+                l_inst.append(new)
+            return l_inst
         except:
             return []
