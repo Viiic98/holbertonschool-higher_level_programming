@@ -56,4 +56,3 @@ class Base:
         except:
             print("empty file")
             return []
-
