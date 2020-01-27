@@ -27,9 +27,12 @@ class Base:
         """ Store object into a file """
         ljson = []
         filename = cls.__name__+".json"
-        for i in list_objs:
-            dir = cls.to_dictionary(i)
-            ljson.append(cls.to_json_string(dir))
+        if list_objs is not None:
+            for i in list_objs:
+                dir = cls.to_dictionary(i)
+                ljson.append(cls.to_json_string(dir))
+        else:
+            ljson = []
         with open(filename, mode='w', encoding="UTF-8") as f:
             json.dump(ljson, f)
 
