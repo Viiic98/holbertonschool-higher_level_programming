@@ -60,9 +60,11 @@ class Base:
         filename = cls.__name__+".json"
         try:
             with open(filename, 'r') as f:
-                my_dic = json.load(f)
+                r = f.read()
+            my_dic = cls.from_json_string(r)
             l_inst = []
             for i in my_dic:
+
                 new = cls.create(**i)
                 l_inst.append(new)
             return l_inst
