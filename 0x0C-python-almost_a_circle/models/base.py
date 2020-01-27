@@ -33,7 +33,7 @@ class Base:
         else:
             ljson = []
         with open(filename, 'w') as f:
-            json.dump(cls.to_json_string(ljson), f)
+            f.write(cls.to_json_string(ljson))
 
     @staticmethod
     def from_json_string(json_string):
