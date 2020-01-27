@@ -16,10 +16,12 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ Object to JSON """
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ Store object into a file """
         ljson = []
         filename = cls.__name__+".json"
         for i in list_objs:
@@ -30,6 +32,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ Read a file from JSON """
         my_l = []
         if json_string is None:
             return my_l
@@ -38,6 +41,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Returns a instance with all attributes """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -47,12 +51,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ Return a list of instances """
         filename = cls.__name__+".json"
         print(filename)
         try:
             with open(filename, 'r') as f:
                 l = f.read()
-                print(type(l))
         except:
-            print("empty file")
             return []
