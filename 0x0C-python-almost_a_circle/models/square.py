@@ -70,6 +70,6 @@ class Square(Rectangle):
             Return:
                     a dictionary that show every key and value
         """
-        dic = {'id:': self.id, 'x': self.x,
+        dic = {'id': self.id, 'x': self.x,
                'size': self.size, 'y': self.y}
         return dic
