@@ -63,6 +63,34 @@ class Base_Test(unittest.TestCase):
         correct += "     #####\n     #####\n"
         self.assertEqual(correct, out.getvalue())
 
+    def test_rec_8(self):
+        """ Str tests """
+        r = Rectangle (2, 2, 2, 2)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (7) 2/2 - 2/2\n", out.getvalue())
+        r = Rectangle (3, 1, 2, 4)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (8) 2/4 - 3/1\n", out.getvalue())
+
+    def test_rec_9(self):
+        """ Update tests """
+        r = Rectangle (10, 10, 10, 10)
+        r.update(89)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 10/10 - 10/10\n", out.getvalue())
+        r.update(89, 2)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/10\n", out.getvalue())
+        r.update(89, 2, 3)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/3\n", out.getvalue())
+        r.update(89, 2, 3, 4)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 4/10 - 2/3\n", out.getvalue())
+        r.update(89, 2, 3, 4, 5)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 4/5 - 2/3\n", out.getvalue())
+
     @staticmethod
     def capture_stdout(obj, method):
         """ return the stdoutput """
