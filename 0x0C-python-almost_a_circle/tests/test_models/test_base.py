@@ -65,16 +65,16 @@ class Base_Test(unittest.TestCase):
 
     def test_rec_8(self):
         """ Str tests """
-        r = Rectangle (2, 2, 2, 2)
+        r = Rectangle(2, 2, 2, 2)
         out = self.capture_stdout(r, "print")
-        self.assertEqual("[Rectangle] (7) 2/2 - 2/2\n", out.getvalue())
-        r = Rectangle (3, 1, 2, 4)
+        self.assertEqual("[Rectangle] (8) 2/2 - 2/2\n", out.getvalue())
+        r = Rectangle(3, 1, 2, 4)
         out = self.capture_stdout(r, "print")
-        self.assertEqual("[Rectangle] (8) 2/4 - 3/1\n", out.getvalue())
+        self.assertEqual("[Rectangle] (9) 2/4 - 3/1\n", out.getvalue())
 
     def test_rec_9(self):
         """ Update tests """
-        r = Rectangle (10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10)
         r.update(89)
         out = self.capture_stdout(r, "print")
         self.assertEqual("[Rectangle] (89) 10/10 - 10/10\n", out.getvalue())
@@ -90,6 +90,22 @@ class Base_Test(unittest.TestCase):
         r.update(89, 2, 3, 4, 5)
         out = self.capture_stdout(r, "print")
         self.assertEqual("[Rectangle] (89) 4/5 - 2/3\n", out.getvalue())
+
+    def test_rec_10(self):
+        """ Update tests """
+        r = Rectangle(10, 10, 10, 10)
+        r.update(height=1)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (1) 10/10 - 10/1\n", out.getvalue())
+        r.update(width=1, x=2)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (1) 2/10 - 1/1\n", out.getvalue())
+        r.update(y=1, width=2, x=3, id=89)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 3/1 - 2/1\n", out.getvalue())
+        r.update(x=1, height=2, y=3, width=4)
+        out = self.capture_stdout(r, "print")
+        self.assertEqual("[Rectangle] (89) 1/3 - 4/2\n", out.getvalue())
 
     @staticmethod
     def capture_stdout(obj, method):
