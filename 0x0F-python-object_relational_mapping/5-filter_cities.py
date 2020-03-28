@@ -15,7 +15,7 @@ if __name__ == "__main__":
                            passwd=password, db=db_name, charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT c.name\
-                 FROM cities AS\
+                 FROM cities AS c\
                  INNER JOIN states AS s\
                  ON c.state_id = s.id\
                  WHERE s.name = %s", (name,))
