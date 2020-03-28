@@ -16,7 +16,8 @@ if __name__ == "__main__":
                  WHERE name LIKE 'N%'\
                  ORDER BY states.id")
     query_row = cur.fetchall()
-    for row in query_row:
-        print(row)
+    if query_row:
+        for row in query_row:
+            print(row)
     cur.close()
     conn.close()
