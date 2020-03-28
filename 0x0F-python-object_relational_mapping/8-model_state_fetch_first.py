@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that list all states using sqlalchemy"""
+""" Script that list the first state using sqlalchemy"""
 
 import sys
 from model_state import Base, State
