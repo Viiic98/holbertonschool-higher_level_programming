@@ -20,8 +20,9 @@ if __name__ == "__main__":
                  ON c.state_id = s.id\
                  WHERE s.name = %s", (name,))
     rows = cur.fetchall()
-    for i in range(cur.rowcount - 1):
-        print("%s, " % rows[i], end="")
-    print("%s" % rows[i + 1])
+    if rows:
+        for i in range(cur.rowcount - 1):
+            print("%s, " % rows[i], end="")
+        print("%s" % rows[i + 1])
     cur.close()
     conn.close()
