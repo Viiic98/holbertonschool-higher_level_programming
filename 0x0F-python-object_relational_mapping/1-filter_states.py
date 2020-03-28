@@ -13,7 +13,7 @@ if __name__ == "__main__":
                            passwd=password, db=db_name, charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states\
-                 WHERE name LIKE 'N%'\
+                 WHERE name LIKE BYNARY 'N%'\
                  ORDER BY states.id")
     query_row = cur.fetchall()
     if query_row:
