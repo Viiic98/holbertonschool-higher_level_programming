@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     records = session.query(State).order_by(State.id).all()
     for row in records:
-        print("{}: {}".format(row.name, row.id))
+        print("{}: {}".format(row.id, row.name))
         # go through the list of cities that have the relationship
         for city in row.cities:
             print("    {}: {}".format(city.id, city.name))
