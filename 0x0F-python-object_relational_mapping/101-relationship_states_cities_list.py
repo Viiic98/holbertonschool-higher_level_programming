@@ -17,10 +17,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    records = session.query(State).all()
+    records = session.query(State).order_by(State.id).all()
     for row in records:
         print("{}: {}".format(row.name, row.id))
         # go through the list of cities that have the relationship
         for city in row.cities:
-            print("\t{}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
     session.close()
