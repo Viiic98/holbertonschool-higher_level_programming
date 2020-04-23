@@ -10,7 +10,7 @@ if __name__ == "__main__":
         value = sys.argv[1]
     else:
         value = ""
-    r = requests.post('http://96e483228857.19.hbtn-cod.io:5000/search_user',
+    r = requests.post('http://0.0.0.0:5000/search_user',
                       data={'q': value})
     try:
         json_obj = r.json()
