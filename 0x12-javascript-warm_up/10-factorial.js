@@ -1,11 +1,14 @@
 #!/usr/bin/node
-const n = parseInt(process.argv[2]);
-let fact = 1;
-if (n) {
-  for (let i = 1; i <= n; i++) {
-    fact *= i;
+function fact (n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return fact(n - 1) * n;
   }
-  console.log(fact);
+}
+const n = parseInt(process.argv[2]);
+if (n) {
+  console.log(fact(n));
 } else {
-  console.log(fact);
+  console.log(1);
 }
