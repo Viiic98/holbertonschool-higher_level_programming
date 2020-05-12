@@ -34,11 +34,16 @@
 #### Occurrences [7-occurrences.js](./7-occurrences.js)
 - Function that returns the number of occurrences in a list
 
-#### Occurrences [8-esrever.js](./8-esrever.js)
+#### Esrever [8-esrever.js](./8-esrever.js)
 - Function that returns the reversed version of a list
 
-#### Occurrences [9-logme.js](./9-logme.js)
-- function that prints the number of arguments already printed and the new argument value.
+#### Log me [9-logme.js](./9-logme.js)
+- Function that prints the number of arguments already printed and the new argument value.
 
-#### Occurrences [10-converter.js](./10-converter.js)
-- function that converts a number from base 10 to another base passed as argument
+#### Number conversion [10-converter.js](./10-converter.js)
+- Function that converts a number from base 10 to another base passed as argument
+
+#### Factor index [100-map.js](./100-map.js)
+- Script that imports an array and computes a new array.
+	- A new list must be created with each value equal to the value of the initial list, multipled by the index in the list
+	- Print both the initial list and the new list
