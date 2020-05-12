@@ -30,3 +30,15 @@
 #### Square [6-square.js](./6-square.js)
 - class Square that defines a square and inherits from Square of [5-square.js](./5-square.js)
 	- Create an instance method called `charPrint(c)` that prints the rectangle using the character `c`
+
+#### Occurrences [7-occurrences.js](./7-occurrences.js)
+- Function that returns the number of occurrences in a list
+
+#### Occurrences [8-esrever.js](./8-esrever.js)
+- Function that returns the reversed version of a list
+
+#### Occurrences [9-logme.js](./9-logme.js)
+- function that prints the number of arguments already printed and the new argument value.
+
+#### Occurrences [10-converter.js](./10-converter.js)
+- function that converts a number from base 10 to another base passed as argument
