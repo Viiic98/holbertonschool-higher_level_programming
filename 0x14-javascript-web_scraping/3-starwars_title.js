@@ -7,6 +7,10 @@ request(URL, function (error, response, body) {
     console.error(error);
   }
   // Parse string body response to an object
-  const obj = JSON.parse(body);
-  console.log(obj.title);
+  if (response.statusCode < 400) {
+    const obj = JSON.parse(body);
+    if (obj) {
+      console.log(obj.title);
+    }
+  }
 });
