@@ -16,8 +16,8 @@ function rFile (file) {
   }
 }
 // Store the information of every file
-let data = rFile(first) + '\n';
-data += rFile(second) + '\n';
+let data = rFile(first);
+data += rFile(second);
 
 // Write in the file
 fs.writeFile(dest, data, (err) => {
