@@ -10,7 +10,7 @@ request(URL, function (error, response, body) {
     console.error(error);
   }
   // Parse string body response to an object
-  if (response.statusCode < 400) {
+  if (response.statusCode === 200) {
     // Write in the file
     fs.writeFile(file, body, (err) => {
       if (err) throw err;
