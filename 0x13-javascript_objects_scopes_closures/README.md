@@ -47,3 +47,6 @@
 - Script that imports an array and computes a new array.
 	- A new list must be created with each value equal to the value of the initial list, multipled by the index in the list
 	- Print both the initial list and the new list
+
+#### Sorted occurences [101-sorted.js](./101-sorted.js)
+- Script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
