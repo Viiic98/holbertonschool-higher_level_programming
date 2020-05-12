@@ -50,3 +50,7 @@
 
 #### Sorted occurences [101-sorted.js](./101-sorted.js)
 - Script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
+
+#### Concat files [102-concat.js](./102-concat.js)
+- Script that concats 2 files.
+	- Did it using fs library
