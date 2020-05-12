@@ -12,11 +12,13 @@ request(URL, function (error, response, body) {
     const obj = JSON.parse(body);
     const userTasks = {};
     for (let i = 0; i < obj.length; i++) {
-      const userId = String(obj[i].userId);
-      if (userTasks[userId]) {
-        userTasks[userId]++;
-      } else {
-        userTasks[userId] = 1;
+      if (obj[i].completed) {
+        const userId = String(obj[i].userId);
+        if (userTasks[userId]) {
+          userTasks[userId]++;
+        } else {
+          userTasks[userId] = 1;
+        }
       }
     }
     console.log(userTasks);
