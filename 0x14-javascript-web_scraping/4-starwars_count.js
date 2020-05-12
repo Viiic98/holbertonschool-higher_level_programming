@@ -13,8 +13,11 @@ request(URL, function (error, response, body) {
       const moviesList = obj.results;
       let nMovies = 0;
       for (let i = 0; i < moviesList.length; i++) {
-        if (moviesList[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-          nMovies++;
+        const charList = moviesList[i].characters;
+        for (let j = 0; j < charList.length; j++) {
+          if (charList[j].endsWith('/18/')) {
+            nMovies++;
+          }
         }
       }
       console.log(nMovies);
