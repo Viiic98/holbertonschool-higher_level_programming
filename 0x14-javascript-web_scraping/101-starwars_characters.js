@@ -24,7 +24,7 @@ function charsInFilm (characters, index) {
       // Parse string body response to an object
       if (response.statusCode === 200) {
         const char = JSON.parse(body);
-        console.log(char.name, char.url);
+        console.log(char.name);
         charsInFilm(characters, index + 1);
       }
     });
