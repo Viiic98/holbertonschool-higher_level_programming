@@ -11,15 +11,15 @@ request(URL, function (error, response, body) {
   if (response.statusCode === 200) {
     const obj = JSON.parse(body);
     const characters = obj.characters;
-    for (const char of characters) {
-      request(char, function (error, response, body) {
+    for (let i = 0; i < characters.length; i++) {
+      request(characters[i], function (error, response, body) {
         if (error) {
           console.error(error);
         }
         // Parse string body response to an object
         if (response.statusCode === 200) {
-          const obj = JSON.parse(body);
-          console.log(obj.name);
+          const char = JSON.parse(body);
+          console.log(char.name);
         }
       });
     }
