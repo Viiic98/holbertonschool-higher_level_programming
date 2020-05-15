@@ -1,3 +1,6 @@
-$.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data, textStatus) {
-  $('DIV#hello').text(data.hello);
-});
+$(document).ready(sayHello());
+function sayHello () {
+  $.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data, textStatus) {
+    $('DIV#hello').text(data.hello);
+  });
+}
