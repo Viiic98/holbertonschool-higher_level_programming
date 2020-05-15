@@ -1,6 +1,5 @@
 # 0x15. Javascript - Web JQuery
 
-------------
 
 #### No jQuery [0-script.js](./0-script.js)
 - Script that updates the text color of the HTML tag `HEADER` to red `(#FF0000)`.
