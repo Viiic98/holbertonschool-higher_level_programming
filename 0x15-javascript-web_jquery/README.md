@@ -35,3 +35,16 @@
 
 #### Say Hello! [9-script.js](./9-script.js)
 - Script that fetches from `https://fourtonfish.com/hellosalut/?lang=fr` and displays the value of `hello` from that fetch in the HTML’s tag `DIV#hello`
+
+#### No jQuery - document loaded [100-script.js](./100-script.js)
+- script that updates the text color of the HTML tag `HEADER` to red `(#FF0000)`
+    - Note: Your script must be imported from the HEAD tag, not at the end of the HTML
+
+#### List, add, remove [](./)
+- script that adds, removes and clears `LI` elements from a list when the user clicks.
+    - The new element must be: `<li>Item</li>`
+    - The new element must be added to `UL.my_list`
+    - When the user clicks on `DIV#add_item`: a new element is added to the list
+    - When the user clicks on `DIV#remove_item`: a last element is removed to the list
+    - When the user clicks on `DIV#clear_list`: all elements of the list are removed
+    - You script must be work when it imported from the `HEAD` tag
