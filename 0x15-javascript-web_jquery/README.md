@@ -1,5 +1,4 @@
-## 0x15. Javascript
-### Web JQuery
+## 0x15. Javascript - Web JQuery
 
 ------------
 
@@ -40,7 +39,7 @@
 - script that updates the text color of the HTML tag `HEADER` to red `(#FF0000)`
     - Note: Your script must be imported from the HEAD tag, not at the end of the HTML
 
-#### List, add, remove [](./)
+#### List, add, remove [101-script.js](./101-script.js)
 - script that adds, removes and clears `LI` elements from a list when the user clicks.
     - The new element must be: `<li>Item</li>`
     - The new element must be added to `UL.my_list`
@@ -48,3 +47,17 @@
     - When the user clicks on `DIV#remove_item`: a last element is removed to the list
     - When the user clicks on `DIV#clear_list`: all elements of the list are removed
     - You script must be work when it imported from the `HEAD` tag
+
+#### Say hello to everybody! [102-script.js](./102-script.js)
+- Script that fetches and prints how to say “Hello” depending of the language
+    - API service: `https://www.fourtonfish.com/hellosalut/hello/`
+    - The language code will be the value entered in the tag `INPUT#language_code` (ex: `es`, `fr`, `en` etc.)
+    - The translation must be fetch when the user clicks on `INPUT#btn_translate`
+    - The translation of “Hello” must be display in the HTML tag `DIV#hello`
+
+#### And press ENTER [103-script.js](./103-script.js)
+- Script that fetches and prints how to say “Hello” depending of the language
+    - API service: `https://www.fourtonfish.com/hellosalut/hello/`
+    - The language code will be the value entered in the tag `INPUT#language_code` (ex: `es`, `fr`, `en` etc.)
+    - The translation must be fetch when the user clicks on `INPUT#btn_translate` OR presses `ENTER` when the focus is on `INPUT#language_code`
+    - The translation of “Hello” must be display in the HTML tag `DIV#hello`
